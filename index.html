@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <title>JS Amaliyot</title>
+</head>
+<body>
+
+  <!--SITE HEADER -->
+  <header class="site-header">
+    <div class="site-header__container container">
+      <a class="site-header__logo-link" href="index.html">
+        <img class="site-header__img" src="img/uzb-gerb.svg" alt="O'zbekiston gerbi" width="45" height="45">
+        <span class="site-header__logo-text">Uzbekistan</span>
+      </a>
+
+      <div class="site-header__checbox checbox js-checbox" id="chk">
+        <img class="checbox_moon-img" src="img/moon.png" alt="oy rasmi" width="16" height="16">
+        <span class="checbox__btn"></span>
+        <img class="checbox_sun-img" src="img/sun.png" alt="quyosh rasmi" width="16" height="16">
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <div class="main-content__container container">
+      <div class="hero">
+        <div class="hero__content">
+          <h1 class="hero__title">Viloyatlar bilan tanishing !</h1>
+          <form class="hero__form">
+            <input class="hero__input" name="text" type="text" placeholder="Viloyatlarni qidirish" required>
+            <span class="error-message">Ma'lumot kiritilmagan</span>
+            <button class="hero__button button" type="submit">Qidirish</button>
+          </form>
+        </div>
+        <img class="hero__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Flag_and_map_of_Uzbekistan.svg/1200px-Flag_and_map_of_Uzbekistan.svg.png" alt="O'zbekiston xaritasi">
+      </div>
+
+
+      <div class="wrapper">
+
+      </div>
+    </div>
+  </main>
+
+  <div class="modal">
+    <div class="modal__container container">
+      <div class="modal__content">
+        <p class="modal__text">Assalomu alaykum. Siz Bu sayt orqali O'zbekistonning barcha viloyatlari haqida ma'lumot olishingiz mumkun !</p>
+        <div class="modal__block-button">
+          <button class="modal__button button js-close-button" type="button">Davom etish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/app.js"></script>
+</body>
+</html>
