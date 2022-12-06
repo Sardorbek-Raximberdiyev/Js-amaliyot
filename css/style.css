@@ -182,7 +182,7 @@ img {
 }
 
 .bg-main-content {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/main-content-bg.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../img/main-content-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
