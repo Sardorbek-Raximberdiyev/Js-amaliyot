@@ -1,11 +1,32 @@
+const elsHeroButton = document.querySelectorAll('.hero__item-button');
+const elHeroImg = document.querySelector('.hero__img');
+
+
+elsHeroButton.forEach(function (elButton) {
+  elButton.addEventListener('click', function () {
+    elsHeroButton.forEach(function (elButton) {
+      elButton.parentElement.classList.remove('hero__item--active')
+    });
+
+    elButton.parentElement.classList.add('hero__item--active');
+
+    elHeroImg.src = elButton.dataset.imgBig;
+  })
+});
+
+
+
 const elform = document.querySelector('form');
 const elInput = document.querySelector('input');
-const elWrapperContent = document.querySelector('.wrapper')
+const elWrapperContent = document.querySelector('.wrapper');
 const elHero = document.querySelector('.hero');
-
+const elJsButton = document.querySelector('.js-button');
+const elMainContent = document.querySelector('.main-content')
 
 elform.addEventListener('submit', function(evt) {
   evt.preventDefault()
+  // elMainContent.classList.remove('bg-main-content');
+
   const elInputText = elInput.value;
   const elFirstName = elInputText.charAt().toUpperCase();
   const elLastName = elInputText.slice(1).toLowerCase();
@@ -16,6 +37,7 @@ elform.addEventListener('submit', function(evt) {
       elWrapperContent.innerHTML = `<h2 class="wrapper__title">Toshkentga xush kelibsiz</h2>
       <p class="wrapper__text">Xozircha saytga ma'lumotlar yuklanmadi</p>`;
       elHero.innerHTML = '';
+      elMainContent.classList.remove('bg-main-content');
       break
     case 'Andijon' :
       elWrapperContent.innerHTML = `
@@ -25,9 +47,13 @@ elform.addEventListener('submit', function(evt) {
       <h2 class="wrapper__title">Xaritadan kuzatish</h2>
       <iframe class="wrapper__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d398064.1615872438!2d72.15020967047796!3d40.77644775574026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bc901d6b13d4ef%3A0xfc45bcaa7973dfac!2sAndizhan%2C%20O%60zbekiston!5e0!3m2!1suz!2s!4v1669302277233!5m2!1suz!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
       elHero.innerHTML = '';
+      elMainContent.classList.remove('bg-main-content');
+
       break
     default :
-    elWrapperContent.innerHTML = `<h2 class="wrapper__title">Bunday ma'lumot yo'q</h2>`;
+    elWrapperContent.innerHTML = `<div class="wrapper__modal">
+      <h2 class="wrapper__title js-active-title">Bunday ma'lumot yo'q</h2>
+    </div>`;
   }
 })
 
@@ -76,4 +102,4 @@ if (elModalButton) {
 
 setTimeout(function () {
   elModal.classList.add('modal-open')
-}, 5000);
+}, 30000);

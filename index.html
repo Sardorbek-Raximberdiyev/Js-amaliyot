@@ -32,7 +32,7 @@
   </header>
 
   <!-- MAIN CONTENT -->
-  <main class="main-content">
+  <main class="main-content bg-main-content">
     <div class="main-content__container container">
       <div class="hero">
         <div class="hero__content">
@@ -40,12 +40,53 @@
           <form class="hero__form">
             <input class="hero__input" name="text" type="text" placeholder="Viloyatlarni qidirish" required>
             <span class="error-message">Ma'lumot kiritilmagan</span>
-            <button class="hero__button button" type="submit">Qidirish</button>
+            <button class="hero__button button js-button" type="submit">Qidirish</button>
           </form>
         </div>
-        <img class="hero__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Flag_and_map_of_Uzbekistan.svg/1200px-Flag_and_map_of_Uzbekistan.svg.png" alt="O'zbekiston xaritasi">
+        <div class="hero__block">
+          <div class="hero__img-block">
+            <button class="hero__img-button right-button button" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="-77 0 512 512"><path d="m98 460-34-34 163-164L64 98l34-34 196 198L98 460Z"/></svg>
+            </button>
+            <img class="hero__img" src="img/andijon.jpg" alt="img" width="450" height="540">
+            <button class="hero__img-button left-button button" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="-78.5 0 512 512"><path d="m257 64 34 34-163 164 163 164-34 34L61 262 257 64Z"/></svg>
+            </button>
+          </div>
+          <ul class="hero__list">
+            <li class="hero__item hero__item--active">
+              <button class="hero__item-button button js-active--button" data-img-big="img/RegistanSquare_Samarkand.jpg">
+                <img class="hero__btn-img" src="img/RegistanSquare_Samarkand.jpg" alt="img" width="99" height="99">
+              </button>
+            </li>
+            <li class="hero__item hero__item--active">
+              <button class="hero__item-button button js-active--button" data-img-big="img/andijon.jpg">
+                <img class="hero__btn-img" src="img/andijon.jpg" alt="img" width="99" height="99">
+              </button>
+            </li>
+            <li class="hero__item">
+              <button class="hero__item-button button" data-img-big="img/fargona.jpg">
+                <img class="hero__btn-img" src="img/fargona.jpg" alt="img" width="99" height="99">
+              </button>
+            </li>
+            <li class="hero__item">
+              <button class="hero__item-button button" data-img-big="img/namangan.jpg">
+                <img class="hero__btn-img" src="img/namangan.jpg" alt="img" width="99" height="99">
+              </button>
+            </li>
+            <li class="hero__item">
+              <button class="hero__item-button button" data-img-big="img/shaxar-rasmi.jpg">
+                <img class="hero__btn-img" src="img/shaxar-rasmi.jpg" alt="img" width="99" height="99">
+              </button>
+            </li>
+            <li class="hero__item">
+              <button class="hero__item-button button" data-img-big="img/sirdaryo.jpg">
+                <img class="hero__btn-img" src="img/sirdaryo.jpg" alt="img" width="99" height="99">
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
-
 
       <div class="wrapper">
 

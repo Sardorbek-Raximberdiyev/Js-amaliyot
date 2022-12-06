@@ -55,7 +55,7 @@ img {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -65,8 +65,8 @@ img {
 
 /* BUTTON */
 .button {
-  display: inline-block;
-  padding: 12px 26px;
+  display: flex;
+  padding: 12px 20px;
   border: 0;
   border-radius: 6px;
   font-size: 18px;
@@ -77,15 +77,18 @@ img {
   text-decoration: none;
   text-align: center;
   cursor: pointer;
+  overflow: hidden;
 }
 
 /* SITE-HEADER */
-.dark-body .site-header {
-  background-color: #35415d;
-}
-
 .site-header {
   background-color: rgb(243, 233, 210);
+  box-shadow: 0 1px 10px black;
+  z-index: 1;
+}
+
+.dark-body .site-header {
+  background-color: #35415d;
 }
 
 .site-header__container {
@@ -175,6 +178,18 @@ img {
 /* HERO */
 .main-content {
   flex-grow: 1;
+  padding-bottom: 40px;
+}
+
+.bg-main-content {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/toshkent.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.dark-body .bg-main-content {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/toshkent.jpg);
 }
 
 .hero {
@@ -193,8 +208,9 @@ img {
 .hero__title {
   margin-top: 0;
   margin-bottom: 28px;
-  font-size: 32px;
+  font-size: 36px;
   line-height: 1.2;
+  text-shadow: 1px 2px 5px #000;
 }
 
 .hero__form {
@@ -210,7 +226,7 @@ img {
   border: 2px solid transparent;
   font-size: 18px;
   border-radius: 6px 0 0 6px;
-  background-color: rgba(230, 237, 238, 0.66);
+  background-color: rgb(230, 237, 238);
 }
 
 .error-message {
@@ -249,17 +265,149 @@ img {
   border-radius: 0 6px 6px 0;
 }
 
-.hero__img {
-  width: 400px;
-  height: 260px;
-  object-fit: cover;
+.hero__img-block {
+  display: flex;
+  position: relative;
 }
+
+.hero__img-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.right-button {
+  right: -25px;
+  top: calc(50% - 50px);
+}
+
+.hero__img {
+  display: block;
+}
+
+.left-button {
+  left: -25px;
+  top: calc(50% - 50px);
+}
+
+.hero__img {
+  display: block;
+  width: 450px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.hero__list {
+  width: 450px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: auto;
+  padding-bottom: 10px;
+}
+
+.hero__item {
+  flex-shrink: 0;
+}
+
+.hero__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.hero__item-button {
+  position: relative;
+  z-index: 1000;
+  border: 3px solid transparent;
+  padding: 0;
+}
+
+.hero__item-button:focus {
+  outline: 0;
+}
+
+
+.hero__item--active .hero__item-button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #ff7500;
+  background-color: rgba(0, 0, 0, 0.6);
+  content: "";
+}
+
+.hero__list {
+  /* Foreground, Background */
+  scrollbar-color: #ff7500 rgb(215, 213, 213);
+}
+
+.hero__list::-webkit-scrollbar {
+  width: 10px; /* Mostly for vertical scrollbars */
+  height: 10px; /* Mostly for horizontal scrollbars */
+}
+
+.hero__list::-webkit-scrollbar-thumb { /* Foreground */
+  border-radius: 5px;
+  background: #ff7500;
+}
+
+.hero__list::-webkit-scrollbar-track { /* Background */
+  border-radius: 5px;
+  background: rgb(215, 213, 213);
+}
+
+.hero__item-button:hover::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  content: "";
+}
+
+.hero__btn-img {
+  display: inline-block;
+  object-fit: cover;
+  width: 99px;
+  height: 99px;
+}
+
+/* .js-active-title {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 20%;
+  background-color: rgb(255, 248, 248, 0.8);
+  z-index: 55000;
+} */
 
 .wrapper__title {
   margin-top: 0;
   margin-bottom: 20px;
   font-size: 32px;
   text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  text-shadow: 1px 2px 5px red;
+}
+
+.dark-body .wrapper__title {
+  color: #fff;
 }
 
 .wrapper__text {
@@ -268,6 +416,7 @@ img {
 }
 
 .wrapper__img {
+  width: 100%;
   margin-bottom: 40px;
 }
 
