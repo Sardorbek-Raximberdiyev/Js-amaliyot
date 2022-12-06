@@ -182,14 +182,14 @@ img {
 }
 
 .bg-main-content {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/toshkent.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../img/main-content-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
 }
 
 .dark-body .bg-main-content {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/toshkent.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(../img/main-content-bg.jpg);
 }
 
 .hero {
@@ -227,6 +227,7 @@ img {
   font-size: 18px;
   border-radius: 6px 0 0 6px;
   background-color: rgb(230, 237, 238);
+  box-shadow: 0 0 1px #000;
 }
 
 .error-message {
